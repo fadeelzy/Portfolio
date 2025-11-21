@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Blog - Fadilah Abdulkadir</title>
+    <meta name="description" content="Insights on backend development, site reliability engineering, and cloud architecture.">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav id="navbar" class="scrolled">
+        <div class="container">
+            <div class="nav-content">
+                <a href="{% url 'index' %}" class="logo">&lt;FA /&gt;</a>
+                <div class="nav-links desktop-nav">
+                    <a href="{% url 'index' %}" class="nav-link">Home</a>
+                    <a href="{% url 'index' %}#skills" class="nav-link">Skills</a>
+                    <a href="{% url 'projects' %}" class="nav-link active">Projects</a>
+                    <a href="{% url 'index' %}#metrics" class="nav-link">Metrics</a>
+                    <a href="{% url 'blogs' %}" class="nav-link">Blog</a>
+                    <a href="{% url 'index' %}#about" class="nav-link">About</a>
+                    <a href="{% url 'index' %}#contact" class="nav-link">Contact</a>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </div>
+       <div class="mobile-menu" id="mobileMenu">
+            <a href="{% url 'index' %}" class="mobile-link">Home</a>
+            <a href="{% url 'index' %}#skills" class="mobile-link">Skills</a>
+            <a href="{% url 'projects' %}" class="mobile-link active">Projects</a>
+            <a href="{% url 'index' %}#metrics" class="mobile-link">Metrics</a>
+            <a href="{% url 'blogs' %}" class="mobile-link">Blog</a>
+            <a href="{% url 'index' %}#about" class="mobile-link">About</a>
+            <a href="{% url 'index' %}#contact" class="mobile-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Blog Page -->
+    <section class="blog-page">
+        <div class="container">
+            <div class="page-header">
+                <a href="{% url 'index' %}" class="back-link">← Back to Home</a>
+                <h1>Technical <span class="gradient-text">Blog</span></h1>
+                <p>Sharing insights on backend development, site reliability engineering, and cloud architecture</p>
+            </div>
+
+            <div class="blog-grid-full">
+                <article class="blog-card-full">
+                    <div class="blog-meta">
+                        <span>📅 March 15, 2025</span>
+                        <span>•</span>
+                        <span>5 min read</span>
+                    </div>
+                    <h2>Mastering Django: Project Structure, ORM Optimization & Authentication</h2>
+                    <p></p>
+                    <div class="tech-stack">
+                        <span>Project Structure</span>
+                        <span>ORM</span>
+                        <span>Auth</span>
+                    </div>
+                    <a href="{% static 'backend.txt' %}" class="blog-link-full">Read Article →</a>
+                </article>
+
+                <article class="blog-card-full">
+                    <div class="blog-meta">
+                        <span>📅 August 8, 2025</span>
+                        <span>•</span>
+                        <span>6 min read</span>
+                    </div>
+                    <h2>Site Reliability Engineering</h2>
+                    <p>Building Resilient Systems with Modern Practices.</p>
+                    <div class="tech-stack">
+                        <span>Iac</span>
+                        <span>Prometheus</span>
+                        <span>Grafana</span>
+                        <span>CI/CD</span>
+                    </div>
+                    <a href="{% static 'sre.txt' %}" class="blog-link-full">Read Article →</a>
+                </article>
+
+                <article class="blog-card-full">
+                    <div class="blog-meta">
+                        <span>📅 February 28, 2024</span>
+                        <span>•</span>
+                        <span>8 min read</span>
+                    </div>
+                    <h2>Building Modern Web Applications on AWS</h2>
+                    <p>How Availability, Scalability, and Security works in AWS.</p>
+                    <div class="tech-stack">
+                        <span>Compute & Scaling </span>
+                        <span>Networking & Delivery</span>
+                        <span>Storage & Databases</span>
+                        <span>Monitoring & Observability</span>
+                        <span>Security & Identity</span>
+                        <span>Messaging & Automation:</span>
+
+                    </div>
+                    <a href="{% static 'aws.txt' %}" class="blog-link-full">Read Article →</a>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+Understanding three core aspects: scalable project structure, efficient database interactions, and secure authentication and authorization.        <div class="container">
+            <p>© 2025 Fadilah Abdulkadir — Designed with reliability in mind ⚙️</p>
+        </div>
+    </footer>
+
+    <script src="{% static 'main.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html> 
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Projects - Fadilah Abdulkadir</title>
+    <meta name="description" content="Complete showcase of backend systems, infrastructure solutions, and cloud architectures.">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav id="navbar" class="scrolled">
+        <div class="container">
+            <div class="nav-content">
+                <a href="{% url 'index' %}" class="logo">&lt;FA /&gt;</a>
+
+                <div class="nav-links desktop-nav">
+                    <a href="{% url 'index' %}" class="nav-link">Home</a>
+                    <a href="{% url 'index' %}#skills" class="nav-link">Skills</a>
+                    <a href="{% url 'projects' %}" class="nav-link active">Projects</a>
+                    <a href="{% url 'index' %}#metrics" class="nav-link">Metrics</a>
+                    <a href="{% url 'blogs' %}" class="nav-link">Blog</a>
+                    <a href="{% url 'index' %}#about" class="nav-link">About</a>
+                    <a href="{% url 'index' %}#contact" class="nav-link">Contact</a>
+                </div>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="{% url 'index' %}" class="mobile-link">Home</a>
+            <a href="{% url 'index' %}#skills" class="mobile-link">Skills</a>
+            <a href="{% url 'projects' %}" class="mobile-link active">Projects</a>
+            <a href="{% url 'index' %}#metrics" class="mobile-link">Metrics</a>
+            <a href="{% url 'blogs' %}" class="mobile-link">Blog</a>
+            <a href="{% url 'index' %}#about" class="mobile-link">About</a>
+            <a href="{% url 'index' %}#contact" class="mobile-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Projects Page -->
+    <section class="projects-page">
+        <div class="container">
+
+            <div class="page-header">
+                <a href="{% url 'index' %}" class="back-link">← Back to Home</a>
+                <h1>All <span class="gradient-text">Projects</span></h1>
+                <p>A complete showcase of backend systems, infrastructure solutions, and cloud architectures</p>
+            </div>
+
+            <!-- Backend Projects -->
+            <div class="projects-section">
+                <h2 class="project-category-title"><span class="category-dot"></span> Backend Projects</h2>
+
+                <div class="projects-grid">
+
+                    <div class="project-card">
+                        <h3>DEVSHOWCASE - Developer Portfolio Project Hub</h3>
+                        <p>A Django + MySQL portfolio platform that lets developers build and share customizable, professional portfolios with no coding needed after setup.</p>
+                        <div class="tech-stack">
+                            <span>Django</span>
+                            <span>MYSQL</span>
+                            <span>Frontend HTML5, CSS3, JS</span>
+                            <span>Version Control</span>
+                            <span>Docker</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/fadeelzy/DEVSHOWCASE-Developer-Portfolio-Project-Hub" class="btn-small btn-outline">GitHub</a>
+                            <a href="https://devshowcase-n6tt.onrender.com" class="btn-small btn-primary">Live Demo</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>Learnlog - Learning Tracker App</h3>
+                        <p> A Django + PostgreSQL app for tracking and visualizing learning progress across books, courses, and tutorials.</p>
+                        <div class="tech-stack">
+                            <span>DRF</span>
+                            <span>Django’s Auth</span>
+                            <span>Frontend</span>
+                            <span>Version Control Git</span>
+                            <span>POSTGRESQL (Render)</span>
+                            <span>Docker</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/fadeelzy/Learnlog-Learning-Tracker-App" class="btn-small btn-outline">GitHub</a>
+                            <a href="https://learnlog.onrender.com" class="btn-small btn-primary">Live Demo</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h3>BrainBolt — Smart Flashcard Learning Platform</h3>
+                        <p>An AI-powered Django + PostgreSQL flashcard app that generates smart study questions using Google Gemini Ai and take quizes for interactive learning.</p>
+                        <div class="tech-stack">
+                            <span>Django</span>
+                            <span>POSTGRESQL (Neon)</span>
+                            <span>Frontend HTML5, CSS3, JS</span>
+                            <span>Version Control</span>
+                            <span>API Integration (Google Gemini)</span>
+                            <span>Docker</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/fadeelzy/-BrainBolt-Smart-Flashcard-Learning-Platform" class="btn-small btn-outline">GitHub</a>
+                            <a href="https://brainbolt-smart-flashcard-learning.onrender.com" class="btn-small btn-primary">Live Demo</a>
+                        </div>
+
+                    </div>
+                    <div class="project-card">
+                        <h4>Skillforge - Resume Builder App</h4>
+                        <p>Django-based Resume Builder with real-time job tracking and PDF export for professional resumes.</p>
+                        <div class="tech-stack">
+                            <span>Django</span>
+                            <span>PostgreSQL</span>
+                            <span>HTML5 & TailwindCSS</span>
+                            <span> Job Tracker REST API</span>
+                            <span>Docker</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/fadeelzy/Skillforge-Resume-Builder-Web-App" class="btn-small btn-outline">GitHub</a>
+                            <a href="https://skillforge-resume-builder.onrender.com" class="btn-small btn-primary">Live Demo</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h4>Paritie - Student Management System</h4>
+                        <p>A user-friendly Django Student Management System for Paritie Innovation Hub, managing students, members, courses, revenue, settings, and sending PDF receipts via email.</p>
+                        <div class="tech-stack">
+                            <span>Django</span>
+                            <span>MYSQL</span>
+                            <span>HTML5, JS, TailwindCSS</span>
+                            <span>PDF API</span>
+                            <span>SMTP API</span>
+                            <span>Docker</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/fadeelzy/django-student-management-system" class="btn-small btn-outline">GitHub</a>
+                            <a href="https://paritie-student-management-system.onrender.com" class="btn-small btn-primary">Live Demo</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h4>VoteBox – Modern Polling & Voting Platform</h4>
+                        <p>Django & PostgreSQL (AWS) polling app enabling users to create polls, vote in real-time, and view results with interactive charts.</p>
+                        <div class="tech-stack">
+                            <span>DRF</span>
+                            <span>HTML/ CSS / JS</span>
+                            <span>Postgresql Hosted on AWS</span>
+                            <span>Django Auth</span>
+                            <span>Docker</span>
+
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/fadeelzy/-VoteBox-Modern-Polling-Voting-Platform-" class="btn-small btn-outline">GitHub</a>
+                            <a href="https://votebox-qsc9.onrender.com" class="btn-small btn-primary">Live Demo</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h4>OpenTrack – Issue Tracker Web App</h4>
+                        <p>A full-stack Django issue tracker that lets teams log bugs, request features, and manage issue lifecycles efficiently.</p>
+                        <div class="tech-stack">
+                            <span>DRF</span>
+                             <span>Github Action (CI/CD)</span>
+                            <span>HTML/ CSS / JS</span>
+                            <span>Postgresql Hosted on AWS</span>
+                            <span>Django Auth</span>
+                            <span>Docker</span>
+
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/fadeelzy/OpenTrack-Issue-Tracker-Web-App" class="btn-small btn-outline">GitHub</a>
+                            <a href="https://opentrack-ega2.onrender.com" class="btn-small btn-primary">Live Demo</a>
+                        </div>
+                    </div>
+                     <div class="project-card">
+                        <h4>Timecapsule Note App</h4>
+                        <p>A secure Django + PostgreSQL system for creating encrypted, time-locked notes that unlock only at their scheduled release time.</p>
+                        <div class="tech-stack">
+                            <span>DRF</span>
+                            <span>HTML/ CSS / JS</span>
+                            <span>Django Auth</span>
+                            <span>POSTGRESQL (Aiven)</span>
+                            <span>Version Control</span>
+                            <span>Docker</span>
+
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/fadeelzy/Time-Capsule-Note-App" class="btn-small btn-outline">GitHub</a>
+                            <a href="https://time-capsule-note-app.onrender.com" class="btn-small btn-primary">Live Demo</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h4>Budgetly - Expense-Tracker App</h4>
+                        <p>A full-stack Django web app for easily logging, tracking, and fairly splitting group expenses.</p>
+                        <div class="tech-stack">
+                            <span>DRF</span>
+                            <span>HTML/ CSS / JS</span>
+                            <span>MONGODB Atlas</span>
+                            <span>Version Control</span>
+                            <span>Docker</span>
+
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/fadeelzy/Budgetly-Expense-Tracker-Web-app" class="btn-small btn-outline">GitHub</a>
+                            <a href="https://budgetly-expense-tracker-3jzr.onrender.com" class="btn-small btn-primary">Live Demo</a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!-- SRE / DevOps Projects -->
+            <div class="projects-section">
+                <h2 class="project-category-title secondary"><span class="category-dot secondary"></span> SRE / DevOps Projects</h2>
+
+                <div class="projects-grid">
+
+                    <div class="project-card">
+                        <h3>SysWatch - Real Time System Monitoring Dashboard</h3>
+                        <p>SysWatch: A web app with Chart.js for real-time system monitoring, displaying live CPU, RAM, Disk, and Network stats in an interactive dashboard.</p>
+
+                        <div class="tech-stack">
+                            <span>Docker</span>
+                            <span>MySQL</span>
+                            <span>Nginx</span>
+                            <span>GitHub Actions</span>
+                            <span>Grafana</span>
+                            <span>Agent Python Script</span>
+                            <span>Django</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://github.com/fadeelzy/SysWatch-Real-Time-System-Monitoring-Dashboard" class="btn-small btn-outline">GitHub</a>
+                            <a href="https://github.com/fadeelzy/SysWatch-Real-Time-System-Monitoring-Dashboard/blob/main/agent/syswatch_agent.py" class="btn-small btn-primary">Live Demo</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>Linux System Administration</h3>
+                        <p>Managed linux-based computer systems to ensure they run efficiently, securely and reliably. </p>
+
+                        <div class="tech-stack">
+                            <span>Installation & Configuration</span>
+                            <span>User and Permission Management</span>
+                            <span>System Monitoring</span>
+                            <span>Security Management</span>
+                            <span>Networking</span>
+                            <span>Automation & Scripting</span>
+                            <span>File Management</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://github.com/fadeelzy/Linux-Commands-Cheat-Sheet" class="btn-small btn-outline">GitHub</a>
+                            <a href="https://github.com/fadeelzy/Linux-Commands-Cheat-Sheet" class="btn-small btn-primary">Live Demo</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h3>SRE - Projects</h3>
+                        <p>A practical SRE project showcasing infrastructure as code, observability, CI/CD, automation, and reliability testing using real-world tools.</p>
+
+                        <div class="tech-stack">
+                            <span>Iac</span>
+                            <span>Monitoring - Grafana & Prometheus</span>
+                            <span>Logging - Loki / Promtail</span>
+                            <span>CI/CD Pipeline - GitHub Actions / GitLab</span>
+                            <span>Automation Scripts</span>
+                            <span>log cleanup - Locust / k6</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://github.com/fadeelzy/SRE---Projects" class="btn-small btn-outline">GitHub</a>
+                            <a href="https://github.com/fadeelzy/SRE---Projects" class="btn-small btn-primary">Live Demo</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- AWS Cloud Projects -->
+            <div class="projects-section">
+                <h2 class="project-category-title aws">☁️ AWS Cloud Projects</h2>
+
+                <div class="projects-grid">
+
+                    <div class="project-card">
+                        <h3>Aws Solutions Architect Labs (All compiled in one.)</h3>
+                        <p>A curated collection of AWS Solutions Architect hands-on labs, notes, diagrams, and automation projects for AWS cloud architecture.</p>
+
+                        <div class="tech-stack">
+                            <span>Core Services</span>
+                            <span>Labs</span>
+                            <span>Architecture Designs</span>
+                            <span>Automations</span>
+                            <span>Monitoring</span>
+                            <span>Certifications</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://github.com/fadeelzy/aws-solutions-architect-labs" class="btn-small btn-outline">GitHub</a>
+                            <a href="https://github.com/fadeelzy/aws-solutions-architect-labs/tree/main/certifications" class="btn-small btn-primary">Live Demo</a>
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Fadilah Abdulkadir — Designed with reliability in mind ⚙️</p>
+        </div>
+    </footer>
+
+    <script src="{% static 'main.js' %}"></script>
+</body>
+</html>

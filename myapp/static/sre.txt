@@ -1,0 +1,91 @@
+Site Reliability Engineering: Building Resilient Systems with Modern Practices
+
+Site Reliability Engineering (SRE) is all about applying software engineering principles to operations to create highly reliable, scalable, and maintainable systems. This article explores the core SRE practices: infrastructure as code, observability, and automation with CI/CD.
+
+1. Infrastructure as Code (IaC)
+
+IaC allows you to define your infrastructure in version-controlled code, making deployments repeatable and error-proof.
+
+Tools: Terraform, CloudFormation, Ansible.
+
+Benefits:
+
+Automated provisioning of servers, networks, and databases.
+
+Consistency across environments.
+
+Easy rollback and auditing.
+
+Example with Terraform:
+
+resource "aws_instance" "app_server" {
+  ami           = "ami-123456"
+  instance_type = "t3.medium"
+  tags = {
+    Name = "AppServer"
+  }
+}
+
+2. Observability & Monitoring
+
+Observability is crucial for detecting and resolving issues before users are impacted. It combines metrics, logging, and tracing.
+
+Key Tools: Prometheus, Grafana, Loki, AlertManager.
+
+Practices:
+
+Instrument applications to expose metrics.
+
+Create dashboards for performance insights.
+
+Set alert rules for anomalies or threshold breaches.
+
+Example Metrics:
+
+CPU, memory, and disk usage.
+
+Request latency and error rates.
+
+Application-specific business metrics.
+
+3. CI/CD & Automation
+
+Automation reduces human error, improves deployment speed, and ensures reliability.
+
+CI/CD Pipelines: Build, test, and deploy using GitHub Actions, GitLab CI, or Jenkins.
+
+Benefits:
+
+Automated testing ensures changes won’t break production.
+
+Zero-downtime deployments with rolling updates or blue/green strategies.
+
+Automated rollback on failures.
+
+Sample GitHub Action Workflow:
+
+name: Deploy App
+on:
+  push:
+    branches: [main]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Deploy to Server
+        run: ./deploy.sh
+
+4. Reliability Testing & Chaos Engineering
+
+SRE emphasizes proactive reliability testing:
+
+Conduct load tests to identify bottlenecks.
+
+Simulate failures using chaos engineering to ensure resilience.
+
+Automate recovery procedures for critical services.
+
+Conclusion
+
+Implementing SRE practices helps teams deliver software reliably and efficiently. By combining IaC, observability, CI/CD automation, and proactive reliability testing, organizations can maintain high uptime, faster releases, and resilient systems that scale gracefully.

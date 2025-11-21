@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fadilah Abdulkadir - Backend Django Developer · Site Reliability Engineer · AWS Cloud Solution Architect</title>
+    <meta name="description" content="Backend Django Developer, Site Reliability Engineer, and AWS Cloud Solution Architect specializing in building resilient systems and reliable infrastructures.">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="#home" class="logo">&lt;FA /&gt;</a>
+                <div class="nav-links desktop-nav">
+                    <a href="#home" class="nav-link active" data-section="home">Home</a>
+                    <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+                    <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+                    <a href="#metrics" class="nav-link" data-section="metrics">Metrics</a>
+                    <a href="#blog" class="nav-link" data-section="blogs">Blog</a>
+                    <a href="#about" class="nav-link" data-section="about">About</a>
+                    <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#home" class="mobile-link" data-section="home">Home</a>
+            <a href="#skills" class="mobile-link" data-section="skills">Skills</a>
+            <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+            <a href="#metrics" class="mobile-link" data-section="metrics">Metrics</a>
+             <a href="#blog" class="nav-link" data-section="blogs">Blog</a>
+            <a href="#about" class="mobile-link" data-section="about">About</a>
+            <a href="#contact" class="mobile-link" data-section="contact">Contact</a>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <!-- High-Quality Video Background -->
+        <div class="hero-video-container">
+            <video 
+                autoplay 
+                loop 
+                muted 
+                playsinline 
+                preload="auto" 
+                class="hero-video"
+                src="{% static 'video.mp4' %}">
+            </video>
+        </div>
+        <!-- Gradient overlays for depth and readability -->
+        <div class="hero-overlay-gradient-vertical"></div>
+        <div class="hero-overlay-gradient-horizontal"></div>
+        <div class="hero-overlay-radial"></div>
+        
+        <div class="container hero-content-wrapper">
+            <div class="hero-content-centered">
+                <div class="hero-content-glass">
+                    <h1 class="hero-title fade-in">
+                        <span class="hero-name">Fadilah</span> <span class="gradient-text">Abdulkadir</span>
+                    </h1>
+                    <div class="typing-container">
+                        <span class="typing-text" id="typingText"></span>
+                        <span class="cursor">|</span>
+                    </div>
+                    <p class="hero-description">
+                        Building resilient backend systems & reliable infrastructures that never go down.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="{% url 'projects' %}" class="btn btn-primary">View Projects</a>
+                        <a href="#contact" class="btn btn-outline">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                            Download Resume
+                        </a>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://github.com/fadeelzy" target="_blank" rel="noopener noreferrer" class="social-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                        </a>
+                        <a href="https://linkedin.com/in/fadilah-abdulkadir-378a47269" target="_blank" rel="noopener noreferrer" class="social-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        </a>
+                        <a href="mailto:fadeelzy@gmail.com" class="social-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+        </div>
+    </section>
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2>Technical <span class="gradient-text">Skills</span></h2>
+                <p>Core expertise in backend development, infrastructure reliability, and cloud architecture</p>
+            </div>
+            <div class="skills-grid">
+                <!-- Backend Development -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <span class="category-icon">💻</span>
+                        <h3>Backend Development</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Django / DRF</span>
+                        <span class="skill-tag">REST API Design</span>
+                        <span class="skill-tag">PostgreSQL / MySQL / MONGODB</span>
+                        <span class="skill-tag">Asynchronous Tasks</span>
+                        <span class="skill-tag">Caching</span>
+                        <span class="skill-tag">Authentication & Authorization</span>
+                        <span class="skill-tag">ORM Optimization</span>
+                        <span class="skill-tag">Testing (Pytest)</span>
+                        <span class="skill-tag">Version Control</span>
+                        <span class="skill-tag">Security ( CSRF, HTTPS/SSL, XSS )</span>
+                        <span class="skill-tag">FastAPI</span>
+
+                    </div>
+                </div>
+                <!-- SRE / DevOps -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <span class="category-icon">⚙️</span>
+                        <h3>SRE / DevOps</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Docker & Kubernetes</span>
+                        <span class="skill-tag">CI/CD (GitHub Actions, GitLab CI)</span>
+                        <span class="skill-tag">Prometheus & Grafana, ELK</span>
+                        <span class="skill-tag">Linux Systems Engineering</span>
+                        <span class="skill-tag">Nginx / Load Balancing</span>
+                        <span class="skill-tag">Infrastructure as Code</span>
+                        <span class="skill-tag">Monitoring & Alerts</span>
+                        <span class="skill-tag">Incident Response, SLO design, RCA</span>
+                        <span class="skill-tag">Automation & Programming</span>
+                        <span class="skill-tag">Networking & Protocols</span>
+                    </div>
+                </div>
+                <!-- AWS Cloud -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <span class="category-icon">☁️</span>
+                        <h3>AWS Cloud Solution Architecture</h3>
+                    </div>
+                    <div class="skill-tags aws-tags">
+                        <span class="skill-tag">Cloud Architecture & Design (Lucidchart)</span>
+                        <span class="skill-tag">Compute Services - AWS EC2 / ECS / Lambda / ECS & EKS</span>
+                        <span class="skill-tag">Storage - S3 / EBS / EFS / CloudFront / Route 53</span>
+                        <span class="skill-tag">Databases - RDS, DynamoDB, ElastiCache</span>
+                        <span class="skill-tag">Network & Security - VPC / IAM / Security Groups / API Gateway</span>
+                        <span class="skill-tag">Monitoring - CloudWatch / CloudTrail / AWS X-Ray</span>
+                        <span class="skill-tag">DevOps - CodePipeline, CloudFormation, Terraform</span>
+                        <span class="skill-tag">Cost Optimization & Management</span>
+                        <span class="skill-tag">Migration - DMS / AWS Migration Hub</span>
+                        <span class="skill-tag">High Availability / Disaster Recovery / Scalability / Elasticity</span>
+                        <span class="skill-tag">SNS / SQS / SWF / Data Warehouses</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Preview -->
+    <section id="projects" class="projects-preview">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured <span class="gradient-text">Projects</span></h2>
+                <p>Real-world solutions built with reliability and performance in mind</p>
+            </div>
+            <div class="projects-container">
+                <h3 class="project-category-title"><span class="category-dot"></span> Backend Projects</h3>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h4>Skillforge - Resume Builder App</h4>
+                        <p>Django-based Resume Builder with real-time job tracking and PDF export for professional resumes.</p>
+                        <div class="tech-stack">
+                            <span>Django</span>
+                            <span>PostgreSQL</span>
+                            <span>HTML5 & TailwindCSS</span>
+                            <span> Job Tracker REST API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/fadeelzy/Skillforge-Resume-Builder-Web-App" class="btn-small btn-outline">GitHub</a>
+                            <a href="https://skillforge-resume-builder.onrender.com" class="btn-small btn-primary">Live Demo</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h4>VoteBox – Modern Polling & Voting Platform</h4>
+                        <p>Django & PostgreSQL (AWS) polling app enabling users to create polls, vote in real-time, and view results with interactive charts.</p>
+                        <div class="tech-stack">
+                            <span>DRF</span>
+                            <span>HTML/ CSS / JS</span>
+                            <span>Postgresql Hosted on AWS</span>
+                            <span>Django Auth</span>
+                            <span>Docker</span>
+
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/fadeelzy/-VoteBox-Modern-Polling-Voting-Platform-" class="btn-small btn-outline">GitHub</a>
+                            <a href="https://votebox-qsc9.onrender.com" class="btn-small btn-primary">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-large">
+                <a href="{% url 'projects' %}" class="btn btn-primary">View All Projects →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metrics Section -->
+    <section id="metrics" class="metrics">
+        <div class="container">
+            <div class="section-header">
+                <h2>Reliability <span class="gradient-text">Metrics</span></h2>
+                <p>Proven track record of building and maintaining highly available systems</p>
+            </div>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-value">99.9%</div>
+                    <div class="metric-label">Uptime Across Services</div>
+                    <div class="metric-tech">Docker + Kubernetes + Monitoring</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">-60%</div>
+                    <div class="metric-label">Deployment Time Reduction</div>
+                    <div class="metric-tech">CI/CD Automation + GitHub Actions</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">&lt;10min</div>
+                    <div class="metric-label">Incident Resolution Time</div>
+                    <div class="metric-tech">Observability Stack + Runbooks</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">-65%</div>
+                    <div class="metric-label">API Latency Improvement</div>
+                    <div class="metric-tech">Query Optimization + Caching</div>
+                </div>
+            </div>
+            <h3 class="aws-metrics-title">☁️ AWS Cloud Metrics</h3>
+            <div class="metrics-grid aws-metrics">
+                <div class="metric-card aws-card">
+                    <div class="metric-value">99.98%</div>
+                    <div class="metric-label">Uptime</div>
+                    <div class="metric-tech">ECS + CloudWatch</div>
+                </div>
+                <div class="metric-card aws-card">
+                    <div class="metric-value">-60%</div>
+                    <div class="metric-label">Deployment Time</div>
+                    <div class="metric-tech">CI/CD (GitHub Actions + ECS)</div>
+                </div>
+                <div class="metric-card aws-card">
+                    <div class="metric-value">-45%</div>
+                    <div class="metric-label">DB Latency</div>
+                    <div class="metric-tech">RDS + Redis Caching</div>
+                </div>
+                <div class="metric-card aws-card">
+                    <div class="metric-value">25%</div>
+                    <div class="metric-label">Infra Cost Reduction</div>
+                    <div class="metric-tech">Auto-scaling + Spot EC2s</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Preview -->
+    <section id="blog" class="blog-preview">
+        <div class="container">
+            <div class="section-header">
+                <h2>Writing What I <span class="gradient-text">Learn</span></h2>
+                <p>Sharing insights on backend development, SRE practices, and infrastructure automation</p>
+            </div>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-meta">
+                        <span>📅 March 15, 2025</span>
+                        <span>•</span>
+                        <span>5 min read</span>
+                    </div>
+                    <h3>Mastering Django: Project Structure, ORM Optimization & Authentication</h3>
+                    <p>Understanding three core aspects: scalable project structure, efficient database interactions, and secure authentication and authorization.</p>
+                    <a href="{% static 'backend.txt' %}" class="blog-link">Read More →</a>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-meta">
+                        <span>📅 August 8, 2025</span>
+                        <span>•</span>
+                        <span>6 min read</span>
+                    </div>
+                    <h3>Site Reliability Engineering</h3>
+                    <p>Building Resilient Systems with Modern Practices.</p>
+                    <a href="{% static 'sre.txt' %}" class="blog-link">Read More →</a>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-meta">
+                        <span>📅 February 28, 2024</span>
+                        <span>•</span>
+                        <span>8 min read</span>
+                    </div>
+                    <h3>Building Modern Web Applications on AWS</h3>
+                    <p>How Availability, Scalability, and Security works in AWS.</p>
+                    <a href="{% static 'aws.txt' %}" class="blog-link">Read More →</a>
+                </article>
+            </div>
+            <div class="text-center mt-large">
+                <a href="{% url 'blogs' %}" class="btn btn-outline btn-large">
+                    View All Articles →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="{% static 'profile.png' %}" alt="Fadilah Abdulkadir">
+                </div>
+                <div class="about-content">
+                    <h2>About <span class="gradient-text">Me</span></h2>
+                    <p class="about-text">
+                        I began my career as an AWS Solutions Architect, designing scalable, secure, and cost-optimized cloud architectures.
+                        Over time, I transitioned into Site Reliability Engineering, building observability pipelines, automating workflows,
+                        and ensuring systems run with high availability. Today, I also specialize in Backend Development with Django, 
+                        bridging the gap between building features and keeping them production-ready.
+                    </p>
+                    <h3>Core Values</h3>
+                    <ul class="values-list">
+                        <li>✓ Data-driven decision making with measurable outcomes</li>
+                        <li>✓ Operational excellence, reliability, and automation</li>
+                        <li>✓ Clean, maintainable, and scalable system designs</li>
+                        <li>✓ Continuous learning and improvement</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In <span class="gradient-text">Touch</span></h2>
+                <p>Let's discuss your next project or opportunity</p>
+            </div>
+            <div class="contact-grid">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+                </form>
+                <div class="contact-links">
+                    <h3>Connect With Me</h3>
+                    <div class="social-links">
+                        <a href="https://github.com/fadeelzy" class="social-link">
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://linkedin.com/in/fadilah-abdulkadir-378a47269" class="social-link">
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="fadeelzy@gmail.com" class="social-link">
+                            <span>Email</span>
+                        </a>
+                        <a href="#" class="social-link">
+                            <span>Resume PDF</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Fadilah Abdulkadir — Designed with reliability in mind ⚙️</p>
+        </div>
+    </footer>
+
+    <script src="{% static 'main.js' %}"></script>
+</body>
+</html>
