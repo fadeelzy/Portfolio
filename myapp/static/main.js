@@ -69,9 +69,10 @@ window.addEventListener('scroll', highlightActiveSection);
 
 // Typing Animation for Hero Section
 const roles = [
-    'Backend Django Developer',
+    'AWS Cloud Solutions Architect',
     'Site Reliability Engineer',
-    'AWS Cloud Solution Architect'
+    'Backend Django Developer',
+    
 ];
 
 let roleIndex = 0;
