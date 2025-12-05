@@ -69,8 +69,8 @@ window.addEventListener('scroll', highlightActiveSection);
 
 // Typing Animation for Hero Section
 const roles = [
-    'AWS Cloud Solutions Architect',
     'Site Reliability Engineer',
+    'AWS Cloud Solutions Architect',
     'Backend Django Developer',
     
 ];
